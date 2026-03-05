@@ -1,265 +1,361 @@
 /* =================================
-   Variables & Fonts
+Variables & Fonts
 ================================= */
 :root {
   --primary-color: #5C4B3B; /* warm earthy brown */
   --secondary-color: #D9C7B0; /* soft beige */
   --accent-color: #A48D7C; /* muted mid-tone */
-  --text-color: #2B2B2B;
-  --bg-color: #FAF8F5;
-  --border: #DDD;
-  
-  --header-height: 70px;
+    --text-color: #2B2B2B;
+    --bg-color: #FAF8F5;
+    --border: #DDD;
+    
+    --header-height: 70px;
 
-  --body-font: 'Inter', sans-serif;
-  --heading-font: 'Playfair Display', serif;
-}
-
-body {
-  margin: 0;
-  font-family: var(--body-font);
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  line-height: 1.6;
+    --body-font: 'Inter', sans-serif;
+    --heading-font: 'Playfair Display', serif;
 }
 
 /* =================================
-   Header & Nav
+Base Styles
+================================= */
+body {
+    margin: 0;
+    font-family: var(--body-font);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* =================================
+Header & Nav
 ================================= */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
-  height: var(--header-height);
-  background-color: var(--bg-color);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    height: var(--header-height);
+    background-color: var(--bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header .logo img {
-  height: 50px;
-  width: auto;
+    height: 50px;
+    width: auto;
 }
 
-nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: var(--text-color);
-  font-weight: 500;
+/* Desktop nav */
+.desktop-nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
+.desktop-nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Buttons in nav */
 nav .btn-outline {
-  border: 2px solid var(--primary-color);
-  padding: 6px 14px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
+    padding: 6px 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 nav .btn-outline:hover {
-  background-color: var(--primary-color);
-  color: #fff;
+    background-color: var(--primary-color);
+    color: #fff;
 }
 
 /* Dark Mode Toggle Button */
 #theme-toggle {
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 /* =================================
-   Hero Section
+Mobile Nav & Hamburger
 ================================= */
-.hero {
-  position: relative;
-  text-align: center;
-  padding: 2rem 1rem;
+#mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1002;
 }
 
-.hero-img {
-  width: 100%;
-  max-height: 500px;
-  object-fit: cover;
-  border-radius: 16px;
-  opacity: 0.85;
+#mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    position: absolute;
+    top: var(--header-height);
+    right: 0;
+    width: 200px;
+    border-left: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    z-index: 1001;
+}
+
+#mobile-nav.active {
+    display: flex;
+}
+
+#mobile-nav a {
+    margin: 0.5rem 0;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+#mobile-nav a:hover {
+    color: var(--primary-color);
+}
+
+/* =================================
+Hero Section
+================================= */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero-text {
+    flex: 1 1 400px;
+    margin: 1rem;
+}
+
+.hero-image {
+    flex: 1 1 400px;
+    margin: 1rem;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
 }
 
 .hero h1 {
-  font-family: var(--heading-font);
-  font-size: 3rem;
-  margin: 1rem 0 0.5rem;
+    font-family: var(--heading-font);
+    font-size: 3rem;
+    margin: 1rem 0 0.5rem;
 }
 
 .hero p {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
-/* Optional grain overlay */
+/* Grain overlay */
 .grain-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  background: url('../assets/grain.png');
-  opacity: 0.05;
-  z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: url('../assets/grain.png');
+    opacity: 0.05;
+    z-index: 9999;
 }
 
 /* =================================
-   Sections (Services, Work, About, Contact)
+Sections (Services, Work, About, Contact)
 ================================= */
 section {
-  padding: 4rem 2rem;
+    padding: 4rem 2rem;
 }
 
 section h1, section h2 {
-  font-family: var(--heading-font);
-  margin-bottom: 1rem;
-  text-align: center;
+    font-family: var(--heading-font);
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 section p {
-  max-width: 800px;
-  margin: 0 auto 2rem;
-  text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    text-align: center;
 }
 
 /* Service Grid */
 .service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .service-grid div {
-  background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  text-align: center;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: center;
 }
 
 /* Work Grid */
 .work-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .case-study img {
-  width: 100%;
-  border-radius: 16px;
-  object-fit: cover;
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
 }
 
 /* Contact Form */
 .contact form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 600px;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .contact input,
 .contact textarea {
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  font-family: var(--body-font);
-  font-size: 1rem;
-  resize: vertical;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    font-family: var(--body-font);
+    font-size: 1rem;
+    resize: vertical;
 }
 
 .contact button {
-  align-self: flex-start;
-  background-color: var(--primary-color);
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 1rem;
+    align-self: flex-start;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 .contact button:hover {
-  background-color: var(--accent-color);
+    background-color: var(--accent-color);
 }
 
 /* =================================
-   Footer
+    Footer
 ================================= */
 footer {
-  text-align: center;
-  padding: 2rem;
-  background-color: var(--bg-color);
-  border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--bg-color);
+    border-top: 1px solid var(--border);
 }
 
 /* =================================
-   Animations
+    Animations
 ================================= */
 .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s forwards;
-  animation-delay: 0.2s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.2s;
 }
 
 @keyframes fadeInUp {
-  to {
+    to {
     opacity: 1;
     transform: translateY(0);
-  }
+    }
 }
 
 /* =================================
-   Responsive / Mobile
+    Dark Mode
+================================= */
+body.dark-mode {
+    background-color: #2B2B2B;
+    color: #FAF8F5;
+}
+
+body.dark-mode nav a,
+body.dark-mode #mobile-nav a {
+    color: #FAF8F5;
+}
+
+body.dark-mode nav .btn-outline {
+    border-color: #FAF8F5;
+}
+
+body.dark-mode nav .btn-outline:hover {
+    background-color: #FAF8F5;
+    color: #2B2B2B;
+}
+
+body.dark-mode header {
+    background-color: #333;
+}
+
+/* =================================
+    Responsive / Mobile
 ================================= */
 @media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    height: auto;
-    padding: 1rem;
-  }
-  
-  nav {
-    margin-top: 1rem;
-  }
-  
-  nav a {
-    margin: 0.5rem 1rem;
-  }
-  
-  .hero h1 {
-    font-size: 2rem;
-  }
-  
-  .hero p {
-    font-size: 1rem;
-  }
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+    
+    nav.desktop-nav {
+        display: none;
+    }
+    
+    #mobile-toggle {
+        display: block;
+        margin-top: 0.5rem;
+    }
+    
+    #mobile-nav a {
+        margin: 0.5rem 0;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
 
-  .service-grid, .work-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .contact button {
-    width: 100%;
-  }
+    .service-grid, .work-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact button {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 480px) {
-  .hero h1 {
-    font-size: 1.6rem;
-  }
-  .hero p {
-    font-size: 0.95rem;
-  }
-}
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+    .hero p {
+        font-size: 0.95rem;
+    }
+    }
