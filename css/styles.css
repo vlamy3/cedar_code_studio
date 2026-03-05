@@ -497,7 +497,7 @@ nav a:hover {
 
 /* Founder image */
 .about-founder {
-  max-width: 350px;     /* slightly bigger */
+  max-width: 450px;     /* slightly bigger */
   width: 100%;          /* responsive scaling */
   display: block;       /* remove inline alignment issues */
   border-radius: 50%;   /* optional: soft circular look */
