@@ -486,3 +486,20 @@ nav a:focus::after {
 nav a:hover {
   color: var(--soft-green);
 }
+
+/* Ensure the container uses full width and centers content */
+.about .founder-wrapper {
+  display: flex;
+  justify-content: center;  /* horizontal centering */
+  width: 100%;              /* make sure it fills the container */
+  margin: 2rem 0;           /* spacing above and below */
+}
+
+/* Founder image */
+.about-founder {
+  max-width: 350px;     /* slightly bigger */
+  width: 100%;          /* responsive scaling */
+  display: block;       /* remove inline alignment issues */
+  border-radius: 50%;   /* optional: soft circular look */
+  object-fit: cover;    /* maintain aspect ratio */
+}
