@@ -127,6 +127,9 @@ nav a {
     align-items: center;
     gap: 60px;
     min-height: 70vh;
+    position: relative;
+    text-align: center;
+    color: var(--text-color);
     }
 
     .hero-text {
@@ -139,10 +142,12 @@ nav a {
     }
 
     .hero-image {
-    flex: 1;
-    background: var(--border);
-    border-radius: 20px;
-    height: 350px;
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 16px;
+    opacity: 0.85;
     }
 
     /* =========================
