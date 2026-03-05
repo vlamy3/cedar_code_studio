@@ -503,3 +503,16 @@ nav a:hover {
   border-radius: 50%;   /* optional: soft circular look */
   object-fit: cover;    /* maintain aspect ratio */
 }
+/* Custom cursor */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease, background-color 0.2s ease;
+  z-index: 9999;
+  mix-blend-mode: difference; /* optional: cool effect on light/dark bg */
+}
