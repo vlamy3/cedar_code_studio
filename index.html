@@ -1,55 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- META -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cedar & Code Studio — boutique creative-tech studio creating elevated brand systems and thoughtful digital experiences.">
+
+    <!-- TITLE -->
     <title>Cedar & Code Studio</title>
+
+    <!-- FAVICONS -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-<!-- Grain Overlay -->
-<div class="grain-overlay"></div>
-
-<!-- Header -->
-<header class="container">
+    <div class="grain-overlay"></div>
+    <header class="container">
     <div class="logo">
-        <img src="assets/logo.png" alt="Cedar & Code Studio Logo">
+    Cedar & Code Studio
     </div>
-    <nav>
+
+    <!-- Desktop nav -->
+    <nav class="desktop-nav">
         <a href="index.html">Home</a>
         <a href="work.html">Work</a>
         <a href="services.html">Services</a>
         <a href="about.html">About</a>
         <a href="contact.html" class="btn-outline">Start Project</a>
     </nav>
+
+    <!-- Hamburger button for mobile -->
+    <button id="mobile-toggle">☰</button>
+
+    <!-- Mobile nav -->
+    <nav id="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn-outline">Start Project</a>
+    </nav>
+
     <button id="theme-toggle">🌙</button>
 </header>
 
-<!-- Hero Section -->
-<section class="hero container fade-in">
-    <img src="assets/images/hero.png" alt="Cedar & Code Studio Hero Image" class="hero-img">
-    <h1>Welcome to Cedar & Code Studio</h1>
-    <p>We create elevated brands, products, and digital experiences.</p>
-</section>
+    <section class="hero container">
+        <div class = "hero-text">
+            <h1>
+                Rooted in design. Powered by code.
+            </h1>
+            <p>
+                We create elevated brand systems and build thoughtful digital experiences for modern product brands and emerging startups.
+            </p>
+            <div class="buttons">
+                <a href="contact.html" class="btn-primary">Start Your Project</a>
+                <br>
+<br>
+<br>
 
-<!-- Services Preview -->
-<section class="services-preview container fade-in">
-    <h2>Our Services</h2>
-    <div class="service-grid">
-        <div>Brand & Product Design</div>
-        <div>Website Design</div>
-        <div>Web & App Development</div>
-        <div>Marketing Creative</div>
-    </div>
-</section>
+                <a href="work.html" class="btn-secondary">View Our Work</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="assets/hero-image.jpeg" alt="Hero Image">
+        </div>
+    </section>
+    
 
-<!-- Footer -->
+    <section class="services container">
+        <h2>
+            What We Do
+        </h2>
+        <div class="service-grid">
+            <div>
+                <h3>
+                    Brand & Product Designer
+                </h3>
+                <p>
+                    Refined packaging, labels, and cohesive visual systems.
+                </p>
+            </div>
+            <div>
+                <h3>
+                    Website Design
+                </h3>
+                <p>
+                    Conversion-focused layouts with clarity and structure.
+                </p>
+            </div>
+            <div>
+                <h3>
+                    Development
+                </h3>
+                <p>
+                    Custom websites and lightweight web applications built to scale.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="cta">
+        <h2>
+            Let's build something intentional.
+        </h2>
+        <a href="contact.html" class="btn-primary">Start Your Project</a>
+    </section>
+<div class="cursor"></div>
+    
 <footer>
-     <p>© 2026 Cedar & Code Studio</p>
+    <p>
+        © 2026 Cedar & Code Studio. All rights reserved.
+    </p>
 </footer>
-
 <script src="js/main.js"></script>
 </body>
 </html>
