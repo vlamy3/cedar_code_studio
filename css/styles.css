@@ -424,3 +424,17 @@ body.dark-mode .service-grid div {
     font-size: 0.95rem;
   }
 }
+/* Footer dark mode */
+body.dark-mode footer {
+  background-color: #1E1E1E; /* slightly darker than page */
+  color: #FAF8F5; /* light text for readability */
+  border-top: 1px solid #444;
+}
+
+body.dark-mode footer a {
+  color: #FAF8F5; /* if you have links in footer */
+}
+
+body.dark-mode footer a:hover {
+  color: var(--soft-green);
+}
