@@ -133,3 +133,36 @@ body.dark footer { color: #eee; }
     h1{font-size:1.8rem;} h2{font-size:1.5rem;} h3{font-size:1.1rem;}
     .hero-img { max-height: 250px; }
 }
+@media (max-width: 768px) {
+nav#mobile-nav {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: var(--bg);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+nav#mobile-nav.active {
+    display: flex;
+}
+
+#mobile-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+  /* Hide desktop nav on mobile */
+header nav:not(#mobile-nav) {
+    display: none;
+}
+}
