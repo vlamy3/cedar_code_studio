@@ -438,3 +438,12 @@ body.dark-mode footer a {
 body.dark-mode footer a:hover {
   color: var(--soft-green);
 }
+/* About page - founder image */
+.about-founder {
+  display: block;          /* ensures image is treated as a block element */
+  margin: 2rem auto;       /* centers horizontally and adds top/bottom spacing */
+  max-width: 300px;        /* slightly bigger, adjust as needed */
+  width: 100%;             /* scales on smaller screens */
+  border-radius: 50%;      /* optional, makes it circular */
+  object-fit: cover;       /* keeps aspect ratio */
+}
