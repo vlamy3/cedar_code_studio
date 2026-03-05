@@ -447,3 +447,35 @@ body.dark-mode footer a:hover {
   border-radius: 50%;      /* optional, makes it circular */
   object-fit: cover;       /* keeps aspect ratio */
 }
+
+/* Nav link underline effect */
+nav a {
+  position: relative; /* needed for pseudo-element */
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Create the underline */
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* space below text */
+  width: 0%;
+  height: 2px;
+  background-color: var(--soft-green); /* underline color */
+  transition: width 0.4s ease;
+}
+
+/* On hover, expand the underline */
+nav a:hover::after,
+nav a:focus::after {
+  width: 100%;
+}
+
+/* Optional: subtle color fade on hover */
+nav a:hover {
+  color: var(--soft-green);
+}
