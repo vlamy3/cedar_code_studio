@@ -302,3 +302,15 @@ nav a {
     height: 500px;
     width: auto;
 }
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.case-study img {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+}
