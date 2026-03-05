@@ -77,3 +77,13 @@ el.addEventListener('mouseleave', () => {
     cursor.style.height = '15px';
 });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    if (mobileToggle && mobileNav) {
+        mobileToggle.addEventListener('click', () => {
+        mobileNav.classList.toggle('active');
+        });
+    }
+});
