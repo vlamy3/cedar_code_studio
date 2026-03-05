@@ -287,3 +287,14 @@ nav a {
     opacity: 0.05;
     z-index: 9999;
 }
+.cursor {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--accent);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease, background 0.2s ease;
+    z-index: 10000;
+}

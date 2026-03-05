@@ -59,3 +59,21 @@ if (mobileToggle) {
         nav.classList.toggle("active");
     });
 }
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
+
+// Optional: enlarge on hover over buttons
+document.querySelectorAll('a, .btn-primary').forEach(el => {
+el.addEventListener('mouseenter', () => {
+    cursor.style.width = '30px';
+    cursor.style.height = '30px';
+});
+el.addEventListener('mouseleave', () => {
+    cursor.style.width = '15px';
+    cursor.style.height = '15px';
+});
+});
