@@ -45,7 +45,7 @@ header {
 
 /* Logo font */
 header .logo {
-  font-family: var(--logo-font);
+  font-family: var(--heading-font);
   font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: 0.05em;
